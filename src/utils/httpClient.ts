@@ -16,7 +16,7 @@ export function getData() {
       return response.json();
     })
     .then((data) => {
-      return data || [];
+      return data;
     });
 
   return res;

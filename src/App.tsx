@@ -16,7 +16,7 @@ function App() {
 
   const fileredPositions =
     location !== ""
-      ? data.filter((p) =>
+      ? data?.filter((p) =>
           p.location.toLowerCase().includes(location.toLowerCase())
         )
       : data;

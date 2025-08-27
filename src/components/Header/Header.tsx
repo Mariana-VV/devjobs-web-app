@@ -96,7 +96,7 @@ export const Header: React.FC<Props> = ({ setLocation }) => {
           </div>
           <div className="filter__radio flex">
             <input type="checkbox" />
-            <label htmlFor=""></label>
+            <label htmlFor="">Full Time Only</label>
             <button className="filter__search">Search</button>
           </div>
         </div>

@@ -17,9 +17,8 @@ export function getData() {
       return response.json();
     })
     .then((data) => {
-      return data;
-    })
+      return data || [];
+    });
 
-    .catch((e) => console.log(e));
   return res;
 }

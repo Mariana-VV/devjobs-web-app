@@ -8,11 +8,20 @@ export function getData() {
     "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS,GET",
   };
 
-  return fetch(BASE_URL, {
-    mode: "no-cors",
-    method: "GET",
-    headers: headers,
-  }).then((response) => {
-    return response.json();
-  });
+  try {
+    return fetch(BASE_URL, {
+      mode: "no-cors",
+      method: "GET",
+      headers: headers,
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        return data;
+      })
+      .catch((e) => console.log(e));
+  } catch (e) {
+    console.log(e);
+  }
 }

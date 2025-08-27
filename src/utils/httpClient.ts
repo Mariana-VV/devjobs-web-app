@@ -9,6 +9,7 @@ export function getData() {
   };
 
   return fetch(BASE_URL, {
+    mode: "no-cors",
     method: "GET",
     headers: headers,
   })

@@ -42,18 +42,23 @@
 .filter {
   height: 80px;
   border-radius: 6px;
-  width: 100%;
+  width: 1110px;
 
-  padding: 16px;
+  // padding: 16px;
   background: #fff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   position: absolute;
   bottom: -25%;
 
+  &__main {
+    padding: 28px 32px;
+  }
+
   &__location {
     border-left: 1px solid #6e8098;
     border-right: 1px solid #6e8098;
+    padding: 28px 23px;
   }
 
   &__search {
@@ -63,6 +68,15 @@
     color: #fff;
     border-radius: 5px;
     font-weight: 700;
+  }
+
+  &__radio {
+    padding: 16px 16px 16px 32px;
+
+    & input {
+      margin-left: 16px;
+      margin-right: 26px;
+    }
   }
 
   & svg {

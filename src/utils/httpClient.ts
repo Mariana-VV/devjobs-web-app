@@ -12,11 +12,7 @@ export function getData() {
     mode: "no-cors",
     method: "GET",
     headers: headers,
-  })
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      return data;
-    });
+  }).then((response) => {
+    return response.json();
+  });
 }

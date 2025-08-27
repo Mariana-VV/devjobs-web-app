@@ -8,8 +8,9 @@ export function getData() {
     "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS,GET",
   };
 
-  let res = null;
   try {
+    let res = null;
+
     res = fetch(BASE_URL, {
       mode: "no-cors",
       method: "GET",
@@ -22,8 +23,8 @@ export function getData() {
         return data;
       })
       .catch((e) => console.log(e));
+    return res;
   } catch (e) {
     console.log(e);
   }
-  return res;
 }

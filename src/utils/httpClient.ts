@@ -3,7 +3,8 @@ const BASE_URL = "http://localhost:5173/devjobs-web-app/public/api/data.json";
 export function getData() {
   const headers = {
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin":
+      "http://localhost:5173/devjobs-web-app/public/api/data.json",
     "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS,GET",
   };
 

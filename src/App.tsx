@@ -10,7 +10,7 @@ function App() {
   const [data, setData] = useState<Position[]>([]);
 
   useEffect(() => {
-    getData().then((d) => setData(d));
+    getData()?.then((d) => setData(d));
   }, []);
 
   console.log(data);

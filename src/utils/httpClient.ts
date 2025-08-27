@@ -9,9 +9,7 @@ export function getData() {
   };
 
   try {
-    let res = null;
-
-    res = fetch(BASE_URL, {
+    const res = fetch(BASE_URL, {
       mode: "no-cors",
       method: "GET",
       headers: headers,

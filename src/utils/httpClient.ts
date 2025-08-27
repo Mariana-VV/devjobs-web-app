@@ -14,6 +14,9 @@ export function getData() {
     headers: headers,
   })
     .then((response) => {
+      if (!response.ok) {
+        console.log(response.text);
+      }
       return response.json();
     })
     .then((data) => {

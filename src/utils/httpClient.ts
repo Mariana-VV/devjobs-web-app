@@ -5,6 +5,7 @@ export function getData() {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS,GET",
+    "Access-Control-Allow-Credentials": "true",
   };
 
   const res = fetch(BASE_URL, {

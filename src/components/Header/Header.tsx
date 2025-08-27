@@ -55,7 +55,7 @@ export const Header = () => {
         </div>
 
         <div className="filter">
-          <div className="filter__main">
+          <div className="filter__main flex">
             <svg
               width="24"
               height="24"
@@ -73,7 +73,7 @@ export const Header = () => {
             <input />
           </div>
 
-          <div className="filter__location">
+          <div className="filter__location flex">
             <svg
               width="17"
               height="24"
@@ -90,7 +90,7 @@ export const Header = () => {
             </svg>
             <input />
           </div>
-          <div className="filter__radio">
+          <div className="filter__radio flex">
             <input type="checkbox" />
             <label htmlFor=""></label>
             <button className="filter__search">Search</button>

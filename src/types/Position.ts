@@ -1,0 +1,20 @@
+export interface Position {
+  id: number;
+  company: string;
+  logo: string;
+  logoBackground: string;
+  position: string;
+  postedAt: string;
+  contract: string;
+  location: string;
+  website: string;
+  apply: string;
+  description: {
+    content: string;
+    items: [];
+  };
+  role: {
+    content: string;
+    items: [];
+  };
+}

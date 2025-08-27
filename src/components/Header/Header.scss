@@ -1,0 +1,71 @@
+@use "../../App.scss" as *;
+
+.header {
+  position: relative;
+  padding-block: 45px 85px;
+  background: url(../../assets/desktop/bg-pattern-header.svg) no-repeat
+    center/cover;
+
+  &__content {
+    @include flex;
+    justify-content: space-between;
+  }
+  &__thema {
+    @include flex;
+    gap: 16px;
+  }
+
+  &__thema-switcher {
+    width: 48px;
+    height: 24px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 5px;
+  }
+
+  &__thema-switcher::after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    transition: 0.3s all ease;
+    transform: translate(0%);
+  }
+}
+
+.transForword .header__thema-switcher::after {
+  transform: translate(120%);
+}
+
+.filter {
+  height: 80px;
+  border-radius: 6px;
+  width: 100%;
+
+  padding: 16px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  bottom: -25%;
+
+  &__location {
+    border-left: 1px solid #6e8098;
+    border-right: 1px solid #6e8098;
+  }
+
+  &__search {
+    width: 123px;
+    height: 48px;
+    background: $accent-color;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+
+  & svg {
+    margin-right: 16px;
+  }
+}

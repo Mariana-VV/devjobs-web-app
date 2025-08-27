@@ -1,0 +1,46 @@
+$main-color: #6e8098;
+$title-color: #19202d;
+$accent-color: #5964e0;
+$middle-grey: #132034;
+$dark-grey: #132034;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: KumbhSans;
+  src: url(./assets/fonts/KumbhSans-VariableFont_YOPQ\wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: $title-color;
+  font-size: 20px;
+}
+
+body {
+  background: #f4f6f8;
+  font-family: KumbhSans, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $main-color;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}

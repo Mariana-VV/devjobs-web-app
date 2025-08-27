@@ -1,0 +1,13 @@
+@import "../../App.scss";
+
+.board {
+  padding-top: 119px;
+  padding-bottom: 208px;
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+}

@@ -8,21 +8,18 @@ export function getData() {
     "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS,GET",
   };
 
-  try {
-    const res = fetch(BASE_URL, {
-      mode: "no-cors",
-      method: "GET",
-      headers: headers,
+  const res = fetch(BASE_URL, {
+    mode: "no-cors",
+    method: "GET",
+    headers: headers,
+  })
+    .then((response) => {
+      return response.json();
     })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
-      .catch((e) => console.log(e));
-    return res;
-  } catch (e) {
-    console.log(e);
-  }
+    .then((data) => {
+      return data;
+    })
+
+    .catch((e) => console.log(e));
+  return res;
 }

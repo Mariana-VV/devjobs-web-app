@@ -21,6 +21,9 @@ export function getData() {
     })
     .then((data) => {
       return data;
+    })
+    .catch((e) => {
+      console.log(e);
     });
 
   return res;

@@ -4,7 +4,11 @@ import { useTheme } from "../../store/ThemeContext";
 
 import "./Header.scss";
 
-export const Header = () => {
+type Props = {
+  setLocation: (location: string) => void;
+};
+
+export const Header: React.FC<Props> = ({ setLocation }) => {
   const { theme, toggleTheme } = useTheme();
 
   const transformClass = classNames({
@@ -88,7 +92,7 @@ export const Header = () => {
                 fill="#5964E0"
               />
             </svg>
-            <input />
+            <input onChange={(event) => setLocation(event.target.value)} />
           </div>
           <div className="filter__radio flex">
             <input type="checkbox" />

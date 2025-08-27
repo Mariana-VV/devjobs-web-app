@@ -8,18 +8,24 @@ import { ThemeProvider } from "../src/store/ThemeContext";
 
 function App() {
   const [data, setData] = useState<Position[]>([]);
+  const [location, setLocation] = useState("");
 
   useEffect(() => {
     getData().then((d) => setData(d));
   }, []);
 
-  console.log(data);
+  const fileredPositions =
+    location !== ""
+      ? data.filter((p) =>
+          p.location.toLowerCase().includes(location.toLowerCase())
+        )
+      : data;
 
   return (
     <ThemeProvider>
-      <Header />
+      <Header setLocation={setLocation} />
 
-      <CardList positions={data} />
+      <CardList positions={fileredPositions} />
     </ThemeProvider>
   );
 }

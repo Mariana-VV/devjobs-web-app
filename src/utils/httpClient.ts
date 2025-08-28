@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5173/devjobs-web-app/public/api/data.json";
+const BASE_URL = "http://localhost:5173/public/api/data.json";
 
 export function getData() {
   const headers = {
@@ -15,7 +15,7 @@ export function getData() {
   })
     .then((response) => {
       if (!response.ok) {
-        console.log(response.text);
+        console.log(response);
       }
       return response.json();
     })

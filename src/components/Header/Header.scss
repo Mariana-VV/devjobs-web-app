@@ -8,6 +8,7 @@
 
   &__content {
     @include flex;
+    position: relative;
     justify-content: space-between;
   }
   &__thema {
@@ -40,16 +41,15 @@
 }
 
 .filter {
-  height: 80px;
-  border-radius: 6px;
-  width: 1110px;
-
-  // padding: 16px;
-  background: #fff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   position: absolute;
-  bottom: -25%;
+  bottom: -130px;
+  width: 100%;
+
+  border-radius: 6px;
+  background-color: #fff;
 
   &__main {
     padding: 28px 32px;

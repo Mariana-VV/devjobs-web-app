@@ -1,4 +1,7 @@
-const BASE_URL = "http://localhost:5173/public/api/data.json";
+const BASE_URL =
+  import.meta.env.VITE_NODE_ENV === "development"
+    ? `http://${import.meta.env.VITE_BASE_URL}/devjobs-web-app/api/data.json`
+    : "/api/data.json";
 
 export function getData() {
   const headers = {
@@ -9,7 +12,7 @@ export function getData() {
   };
 
   const res = fetch(BASE_URL, {
-    mode: "no-cors",
+    // mode: "no-cors",
     method: "GET",
     headers: headers,
   })

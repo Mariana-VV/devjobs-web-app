@@ -21,7 +21,7 @@ export const Header: React.FC<Props> = ({ setLocation }) => {
       <div className="container">
         <div className="header__content">
           <div className="header__logo">
-            <img src="src/assets/images/devjobs.png" alt="" />
+            <img src="/assets/images/devjobs.png" alt="" />
           </div>
           <div className={transformClass} onClick={toggleTheme}>
             <svg

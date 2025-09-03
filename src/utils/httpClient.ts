@@ -1,4 +1,7 @@
-const BASE_URL = "/api/data.json";
+const BASE_URL =
+  import.meta.env.VITE_MODE === "development"
+    ? import.meta.env.VITE_BASE_URL
+    : `${import.meta.env.VITE_PROJECT_NAME}${import.meta.env.VITE_BASE_URL}`;
 
 export function getData() {
   const headers = {

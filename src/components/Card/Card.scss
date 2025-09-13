@@ -1,7 +1,6 @@
 @use "../../App.scss" as *;
 
 .card {
-  width: 350px;
   height: 228px;
   background: #fff;
   border-radius: 6px;
@@ -26,10 +25,6 @@
     font-weight: 700;
   }
 
-  &__company {
-    margin-bottom: 40px;
-  }
-
   &__info {
     display: flex;
     align-items: center;
@@ -40,6 +35,13 @@
 
   &__title {
     margin-bottom: 12px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 }
 

@@ -1,9 +1,8 @@
-const BASE_URL =
-  import.meta.env.VITE_MODE === "development"
-    ? "/api/data.json"
-    : "/devjobs-web-app/api/data.json";
+import type { Position } from "../types/Position";
 
-export function getData() {
+const BASE_URL = `${import.meta.env.BASE_URL}`;
+
+export function getData(): Promise<Position[]> {
   const headers = {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
@@ -11,19 +10,13 @@ export function getData() {
     "Access-Control-Allow-Credentials": "true",
   };
 
-  const res = fetch(BASE_URL, {
+  const res = fetch(`${BASE_URL}/api/data.json`, {
     // mode: "no-cors",
     method: "GET",
     headers: headers,
   })
     .then((response) => {
-      if (!response.ok) {
-        console.log(response);
-      }
       return response.json();
-    })
-    .then((data) => {
-      return data;
     })
     .catch((e) => {
       console.log(e);

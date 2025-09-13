@@ -1,0 +1,125 @@
+@use "../../App.scss" as *;
+
+.details {
+  position: relative;
+  margin-top: 131px;
+  padding: 48px 43px 48px 48px;
+  line-height: 26px;
+
+  & .container {
+    max-width: 730px;
+  }
+
+  & p {
+    color: $main-color;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__main-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: $title-color;
+    margin-bottom: 8px;
+  }
+
+  &__country {
+    color: $accent-color;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__btn {
+    padding: 16px 28px;
+    background-color: $accent-color;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    color: $title-color;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    margin-bottom: 48px;
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: num;
+}
+
+ol li {
+  counter-increment: num;
+
+  padding-left: 30px;
+  position: relative;
+}
+
+ol li::before {
+  content: counter(num);
+  font-weight: bold;
+  color: $accent-color;
+  position: absolute;
+  left: 0;
+}
+
+.panel {
+  position: absolute;
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  height: 140px;
+  width: 100%;
+
+  &__logo {
+    @include flex;
+    padding-inline: 30px;
+
+    & img {
+      width: 81px;
+      height: 23px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 13px;
+    font-size: 24px;
+    color: $title-color;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  &__site {
+    padding: 16px 20px;
+    background-color: rgba(89, 100, 224, 0.25);
+    color: #5964e0;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+}

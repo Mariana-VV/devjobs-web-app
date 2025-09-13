@@ -9,7 +9,8 @@ export interface Position {
   location: string;
   website: string;
   apply: string;
-  description: {
+  description: string;
+  requirements: {
     content: string;
     items: [];
   };

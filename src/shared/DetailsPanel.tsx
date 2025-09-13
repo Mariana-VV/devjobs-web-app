@@ -1,25 +1,18 @@
-import classNames from "classnames";
-import "../../App.scss";
-import { useTheme } from "../../store/ThemeContext";
+import { useParams } from "react-router";
+import "../App.scss";
+import "./DetailsPanel.scss";
+import { useContext } from "react";
+import { ThemeContext } from "../store/ThemeContext";
 
-import "./Header.scss";
-
-export const Header = () => {
-  const { theme, toggleTheme } = useTheme();
-
-  const transformClass = classNames({
-    header__thema: true,
-    transForword: theme === "dark",
-  });
-
+export const DetailsPanel = () => {
   return (
     <header className="header">
       <div className="container">
         <div className="header__content">
           <div className="header__logo">
-            <img src="./public/assets/desktop/logo.svg" alt="" />
+            <img src="../public/assets/desktop/bg-pattern-header.svg" alt="" />
           </div>
-          <div className={transformClass} onClick={toggleTheme}>
+          <div>
             <svg
               width="20"
               height="19"

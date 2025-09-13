@@ -11,8 +11,8 @@ $dark-grey: #132034;
 }
 
 @font-face {
-  font-family: KumbhSans;
-  src: url(./assets/fonts/KumbhSans-VariableFont_YOPQ\wght.ttf);
+  font-family: "KumbhSans";
+  src: url("../public/assets/fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf");
 }
 
 * {
@@ -28,16 +28,21 @@ $dark-grey: #132034;
 
 body {
   background: #f4f6f8;
-  font-family: KumbhSans, sans-serif;
+  font-family: "KumbhSans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: $main-color;
 }
 
 button,
-input {
+input,
+a {
   border: none;
   outline: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .container {

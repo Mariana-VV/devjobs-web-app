@@ -1,7 +1,12 @@
 import "./App.css";
+import { ThemeSwitcher } from "./components/ThemeSwitcher/ThemeSwitcher";
 
 function App() {
-  return <>Hello</>;
+  return (
+    <>
+      <ThemeSwitcher />
+    </>
+  );
 }
 
 export default App;

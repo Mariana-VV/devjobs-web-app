@@ -1,4 +1,6 @@
 @use "./mixins" as *;
+@use "./variables" as *;
+
 *,
 ::after,
 ::before {
@@ -14,7 +16,8 @@
 body {
   min-height: 100vh;
 
-  @include flex;
+  @include flex-center; // Property will be removed later
+  background: $violet; // Property will be removed later
 }
 
 img,

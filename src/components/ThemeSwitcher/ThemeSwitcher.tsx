@@ -4,9 +4,9 @@ import classNames from "classnames";
 
 export const ThemeSwitcher = () => {
   const [isSwitched, setIsSwitched] = useState(false);
-  function handleThemeSwitcherClick() {
+  const handleSwitch = () => {
     setIsSwitched((switcher) => !switcher);
-  }
+  };
 
   const buttonClass = classNames("switcher__box", {
     switch: isSwitched,
@@ -14,15 +14,17 @@ export const ThemeSwitcher = () => {
   return (
     <div className="switcher">
       <div className="switcher__icon">
-        <img src="src/components/ThemeSwitcher/images/sun.svg" alt="sun" />
+        <img
+          src={`${import.meta.env.BASE_URL}/assets/images/sun.svg`}
+          alt="sun"
+        />
       </div>
-      <a
-        href="#"
-        className={buttonClass}
-        onClick={handleThemeSwitcherClick}
-      ></a>
+      <button className={buttonClass} onClick={handleSwitch} />
       <div className="switcher__icon">
-        <img src="src/components/ThemeSwitcher/images/moon.svg" alt="moon" />
+        <img
+          src={`${import.meta.env.BASE_URL}/assets/images/moon.svg`}
+          alt="moon"
+        />
       </div>
     </div>
   );

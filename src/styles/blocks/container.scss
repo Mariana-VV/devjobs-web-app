@@ -1,12 +1,12 @@
-@mixin container {
+.container {
   margin: 0 auto;
   max-width: 1110px;
 
-  @media screen and (max-width: 689px) {
+  @include onTablet {
     max-width: 689px;
   }
 
-  @media screen and (max-width: 327px) {
+  @include onTablet {
     max-width: 327px;
   }
 }

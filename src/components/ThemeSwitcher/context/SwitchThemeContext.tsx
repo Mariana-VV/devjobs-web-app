@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
 
 import React, {
   createContext,
   useState,
-  useContext,
   useEffect,
   type ReactNode,
 } from "react";

@@ -1,27 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-import { useContext, useMemo, useState } from "react";
 import "./ThemeSwitcher.scss";
 import classNames from "classnames";
-import { ThemeContext } from "./context/SwitchThemeContext";
+import { useTheme } from "./hooks/useTheme";
 
 export const ThemeSwitcher = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
-  useMemo(() => {
-    theme === "dark"
-      ? (document.body.style.backgroundColor = "#121721")
-      : (document.body.style.backgroundColor = "#f4f6f8");
-  }, [theme]);
-
-  const [isSwitched, setIsSwitched] = useState(false);
-  const handleSwitch = () => {
-    toggleTheme;
-
-    setIsSwitched((switcher) => !switcher);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   const buttonClass = classNames("switcher__box", {
-    switch: isSwitched,
+    switch: theme === "dark",
   });
   return (
     <div className="switcher">
@@ -31,7 +16,7 @@ export const ThemeSwitcher = () => {
           alt="sun"
         />
       </div>
-      <button className={buttonClass} onClick={handleSwitch} />
+      <button className={buttonClass} onClick={toggleTheme} />
       <div className="switcher__icon">
         <img
           src={`${import.meta.env.BASE_URL}/assets/images/moon.svg`}

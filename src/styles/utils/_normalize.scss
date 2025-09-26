@@ -15,6 +15,7 @@
 
 body {
   min-height: 100vh;
+  background-color: $background-color;
 
   @include flex-center; // Property will be removed later
   // background: $violet; // Property will be removed later

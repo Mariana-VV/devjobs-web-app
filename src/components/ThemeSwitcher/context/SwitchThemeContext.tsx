@@ -1,31 +1,33 @@
-/* eslint-disable react-refresh/only-export-components */
-
-import React, {
+import {
   createContext,
   useState,
   useEffect,
-  type ReactNode,
+  type PropsWithChildren,
+  type FC,
 } from "react";
 
+type Theme = "light" | "dark";
+
 interface ThemeContextProps {
-  theme: string;
-  toggleTheme?: () => void;
+  theme: Theme;
+  toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({
+const ThemeContext = createContext<ThemeContextProps>({
   theme: "light",
   toggleTheme: () => {},
 });
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem("theme") || "light"
-  );
+const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
+  const [theme, setTheme] = useState<Theme>(() => {
+    const storedTheme = localStorage.getItem("theme");
+
+    return storedTheme === "dark" ? "dark" : "light";
+  });
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
+    document.documentElement.style.setProperty("color-scheme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
@@ -38,3 +40,5 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     </ThemeContext.Provider>
   );
 };
+
+export { ThemeContext, ThemeProvider };

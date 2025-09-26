@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
 
   @include flex-center; // Property will be removed later
-  background: $violet; // Property will be removed later
+  // background: $violet; // Property will be removed later
 }
 
 img,
@@ -26,4 +26,8 @@ svg,
 video {
   display: block;
   max-width: 100%;
+}
+
+button {
+  cursor: pointer;
 }

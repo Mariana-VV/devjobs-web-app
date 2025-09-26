@@ -6,7 +6,7 @@
     max-width: 689px;
   }
 
-  @include onTablet {
+  @include onMobile {
     max-width: 327px;
   }
 }

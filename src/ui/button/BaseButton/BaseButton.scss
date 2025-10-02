@@ -1,0 +1,15 @@
+@use "../../../styles/globals.scss" as *;
+
+.btn {
+  width: 100%;
+  max-width: 141px;
+  background: $btn-bg-color;
+  color: $white;
+  padding: 16px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background: $btn-hover-bg-color;
+}

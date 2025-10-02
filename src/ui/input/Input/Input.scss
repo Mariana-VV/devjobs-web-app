@@ -1,0 +1,15 @@
+@use "../../../styles/globals.scss" as *;
+
+.input-box {
+  padding: 28px 28px 28px 72px;
+  border-radius: 6px;
+  max-width: 328px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.input-box::placeholder {
+  color: $very-dark-blue;
+  font-size: 16px;
+}

@@ -13,9 +13,16 @@
   font: inherit;
 }
 
+* {
+  transition: all 0.4s ease;
+}
+
 body {
   min-height: 100vh;
-  background-color: $background-color;
+  background-color: $body-bg-color;
+
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
 
   @include flex-center; // Property will be removed later
   // background: $violet; // Property will be removed later
@@ -30,5 +37,6 @@ video {
 }
 
 button {
+  border: 0;
   cursor: pointer;
 }

@@ -3,13 +3,13 @@
 .btn {
   width: 100%;
   max-width: 141px;
-  background: $violet;
+  background: $btn-bg-color;
   color: $white;
   padding: 16px;
   border-radius: 5px;
   font-weight: 700;
 }
 
-.added {
-  background: $btn-bg-color;
+.btn:hover {
+  background: $btn-hover-bg-color;
 }

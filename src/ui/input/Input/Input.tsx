@@ -1,11 +1,11 @@
 import type { FC } from "react";
-import type { Props } from "../../button/types/Props";
 import "./Input.scss";
+import type { InputProps } from "../types/InputProps";
 
-export const Input: FC<Props> = ({ text }) => {
+export const Input: FC<InputProps> = ({ text }) => {
   return (
-    <div className="input-block">
-      <input placeholder={text} />
-    </div>
+    <label>
+      <input placeholder={text} className="input-box" />
+    </label>
   );
 };

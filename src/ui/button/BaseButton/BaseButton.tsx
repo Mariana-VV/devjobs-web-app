@@ -1,6 +1,10 @@
 import type { FC } from "react";
-import type { Props } from "../types/Props";
+import type { BaseButtonProps } from "../../input/types/InputProps";
 
-export const BaseButton: FC<Props> = ({ text, ...props }) => {
-  return <button {...props}>{text}</button>;
+export const BaseButton: FC<BaseButtonProps> = ({ text, ...props }) => {
+  return (
+    <button {...props} className="btn">
+      {text}
+    </button>
+  );
 };

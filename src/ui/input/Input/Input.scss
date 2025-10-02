@@ -1,6 +1,6 @@
 @use "../../../styles/globals.scss" as *;
 
-.input-block input {
+.input-box {
   padding: 28px 28px 28px 72px;
   border-radius: 6px;
   max-width: 328px;
@@ -9,7 +9,7 @@
   outline: none;
 }
 
-.input-block input::placeholder {
+.input-box::placeholder {
   color: $very-dark-blue;
   font-size: 16px;
 }

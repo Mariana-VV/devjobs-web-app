@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import type { BaseButtonProps } from "../../input/types/InputProps";
+import type { BaseButtonProps } from "../types/BaseButtonProps";
 
 export const BaseButton: FC<BaseButtonProps> = ({ text, ...props }) => {
   return (

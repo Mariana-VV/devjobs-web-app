@@ -2,7 +2,7 @@ import "./App.scss";
 import { ThemeSwitcher } from "./components/ThemeSwitcher/ThemeSwitcher";
 import "./ui/button/BaseButton/BaseButton.scss";
 import { MainButton } from "./ui/button/MainButton/MainButton";
-import { SeconderyButton } from "./ui/button/SeconderyButton/SecondaryButton";
+import { SecondaryButton } from "./ui/button/SeconderyButton/SecondaryButton";
 import { Input } from "./ui/input/Input/Input";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 
         <MainButton text="Load More" />
 
-        <SeconderyButton text="Company Site" />
+        <SecondaryButton text="Company Site" />
 
         <MainButton text="Apply Now" />
 

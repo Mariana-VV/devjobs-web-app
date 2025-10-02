@@ -1,2 +1,9 @@
+@use "./styles/globals.scss" as *;
 
+.temp {
+  @include flex-center;
 
+  flex-direction: column;
+  gap: 20px;
+  margin-block-start: 50px;
+}

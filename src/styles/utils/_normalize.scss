@@ -17,6 +17,9 @@ body {
   min-height: 100vh;
   background-color: $background-color;
 
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+
   @include flex-center; // Property will be removed later
   // background: $violet; // Property will be removed later
 }
@@ -30,5 +33,6 @@ video {
 }
 
 button {
+  border: 0;
   cursor: pointer;
 }

@@ -1,3 +1,9 @@
+@use "../../../styles/utils/variables.scss" as *;
 
+.main--button {
+  background: $violet;
+}
 
-
+.main--button:hover {
+  background: $light-violet;
+}

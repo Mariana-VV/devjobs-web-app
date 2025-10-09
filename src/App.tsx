@@ -9,17 +9,19 @@ function App() {
   return (
     <>
       <ThemeSwitcher />
-      {/* <h1>ThemeSwitcherContext</h1> */}
       <div className="temp">
-        <MainButton text="Search" style={{ maxWidth: "123px" }} />
+        <MainButton text="Search" style={{ paddingInline: "35px" }} />
 
-        <MainButton text="Load More" />
+        <MainButton text="Load More" style={{ paddingInline: "30px" }} />
 
-        <SecondaryButton text="Company Site" />
+        <SecondaryButton
+          text="Company Site"
+          style={{ paddingInline: "35px" }}
+        />
 
-        <MainButton text="Apply Now" />
+        <MainButton text="Apply Now" style={{ paddingInline: "20px" }} />
 
-        <Input text="Enter desired job…" />
+        <Input text="Enter desired job…" style={{ paddingInline: "28px" }} />
       </div>
     </>
   );

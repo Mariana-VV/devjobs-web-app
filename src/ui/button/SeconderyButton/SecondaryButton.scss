@@ -1,8 +1,9 @@
-.secondary-btn {
-  color: $violet;
-  background-color: $secondary-btn-bg;
+@use "../../../styles/utils/variables.scss" as *;
+
+.secondary-button {
+  background: $button-secondary-bg;
 }
 
-.secondary-btn:hover {
-  background: $light-violet;
+.secondary-button:hover {
+  background: $button-secondary-hover-bg;
 }

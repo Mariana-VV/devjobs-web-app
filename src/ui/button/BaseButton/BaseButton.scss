@@ -1,6 +1,10 @@
-@use "../../../styles/globals.scss" as *;
+@use "../../../styles/utils/index.scss" as *;
+
+$button-secondary-bg: light-dark(#c9c9c9, $very-dark-blue);
+$button-secondary-hover-bg: light-dark($light-violet, $gray);
 
 .button {
+  display: block;
   width: 100%;
   max-width: 141px;
   color: $white;

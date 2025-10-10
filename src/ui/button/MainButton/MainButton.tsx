@@ -4,12 +4,5 @@ import type { BaseButtonProps } from "../types/BaseButtonProps";
 import "./MainButton.scss";
 
 export const MainButton: FC<BaseButtonProps> = ({ text, ...props }) => {
-  const { className } = props;
-  return (
-    <BaseButton
-      {...props}
-      text={text}
-      className={`${className} main--button`}
-    />
-  );
+  return <BaseButton {...props} text={text} className="button--main" />;
 };

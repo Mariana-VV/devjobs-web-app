@@ -17,6 +17,10 @@
   transition: all 0.4s ease;
 }
 
+#root {
+  width: 100%;
+}
+
 body {
   min-height: 100vh;
   background-color: $body-bg;
@@ -25,7 +29,6 @@ body {
   font-size: 16px;
 
   @include flex-center; // Property will be removed later
-  // background: $violet; // Property will be removed later
 }
 
 img,

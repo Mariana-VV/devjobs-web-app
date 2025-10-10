@@ -1,13 +1,16 @@
-import type { FC } from "react";
+import type { ElementType, FC } from "react";
 import "./Input.scss";
-import type { InputProps } from "../types/InputProps";
-import Search from "../../../assets/images/search.svg?react";
+import type { InputProps } from "../types/BaseInputProps";
 
-export const Input: FC<InputProps> = ({ text }) => {
+type Props = InputProps & {
+  Icon: ElementType;
+};
+
+export const Input: FC<Props> = ({ text, Icon }) => {
   return (
-    <label className="input--label">
-      <Search className="icon" />
-      <input placeholder={text} className="input-box" />
+    <label className="input">
+      <Icon className="icon" />
+      <input placeholder={text} className="input--field" />
     </label>
   );
 };

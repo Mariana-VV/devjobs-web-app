@@ -1,0 +1,25 @@
+@use "../../../styles/utils/index.scss" as *;
+
+.input {
+  position: relative;
+
+  &__field {
+    padding: 28px 28px 28px 72px;
+    border-radius: 6px;
+    max-width: 328px;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: light-dark(rgba(25, 32, 45, 0.25), rgba(255, 255, 255, 0.25));
+      font-size: 16px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 32px;
+    top: 37%;
+  }
+}

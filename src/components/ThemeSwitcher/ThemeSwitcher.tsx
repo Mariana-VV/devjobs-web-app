@@ -1,6 +1,8 @@
 import "./ThemeSwitcher.scss";
 import classNames from "classnames";
 import { useTheme } from "./hooks/useTheme";
+import Sun from "../../assets/images/sun.svg?react";
+import Moon from "../../assets/images/moon.svg?react";
 
 export const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();
@@ -11,17 +13,11 @@ export const ThemeSwitcher = () => {
   return (
     <div className="switcher">
       <div className="switcher__icon">
-        <img
-          src={`${import.meta.env.BASE_URL}/assets/images/sun.svg`}
-          alt="sun"
-        />
+        <Sun />
       </div>
       <button className={buttonClass} onClick={toggleTheme} />
       <div className="switcher__icon">
-        <img
-          src={`${import.meta.env.BASE_URL}/assets/images/moon.svg`}
-          alt="moon"
-        />
+        <Moon />
       </div>
     </div>
   );

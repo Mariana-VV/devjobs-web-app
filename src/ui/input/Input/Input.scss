@@ -3,7 +3,7 @@
 .input {
   position: relative;
 
-  &--field {
+  &__field {
     padding: 28px 28px 28px 72px;
     border-radius: 6px;
     max-width: 328px;
@@ -16,9 +16,10 @@
       font-size: 16px;
     }
   }
-}
-.icon {
-  position: absolute;
-  left: 32px;
-  top: 37%;
+
+  &__icon {
+    position: absolute;
+    left: 32px;
+    top: 37%;
+  }
 }

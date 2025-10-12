@@ -4,5 +4,5 @@ import { BaseButton } from "../BaseButton/BaseButton";
 import "./SecondaryButton.scss";
 
 export const SecondaryButton: FC<BaseButtonProps> = ({ text, ...props }) => {
-  return <BaseButton {...props} text={text} className="secondary-button" />;
+  return <BaseButton {...props} text={text} className="button--secondary" />;
 };

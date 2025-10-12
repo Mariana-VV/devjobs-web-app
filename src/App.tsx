@@ -20,8 +20,11 @@ function App() {
 
         <MainButton text="Apply Now" />
 
-        <Input text="Filter by title, companies, expertise..." Icon={Search} />
-        <Input text="Filter by location..." Icon={Location} />
+        <Input
+          placeholder="Filter by title, companies, expertise..."
+          Icon={Search}
+        />
+        <Input placeholder="Filter by location..." Icon={Location} />
       </div>
     </>
   );

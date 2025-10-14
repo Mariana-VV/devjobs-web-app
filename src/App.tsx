@@ -1,11 +1,5 @@
 import "./App.scss";
-import { ThemeSwitcher } from "./components/ThemeSwitcher/ThemeSwitcher";
 import "./ui/button/BaseButton/BaseButton.scss";
-import { MainButton } from "./ui/button/MainButton/MainButton";
-import { SecondaryButton } from "./ui/button/SeconderyButton/SecondaryButton";
-import { Input } from "./ui/input/Input/Input";
-import Search from "./assets/images/search.svg?react";
-import Location from "./assets/images/location.svg?react";
 import { Header } from "./module/Header/Header";
 import { JobPage } from "./module/Job/JobPage";
 import { Route, Routes } from "react-router";

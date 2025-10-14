@@ -1,45 +1,40 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { JobList } from "./JobList";
 import { useJob } from "./hooks/useJob";
 import { SearchPanel } from "../SearchPanel/SearchPanel";
 import type { Job } from "../../types/Job";
 
-const FULL_TiME = "Full Time";
+const FULL_TIME = "Full Time";
 
 const filterJobs = (
   jobs: Job[],
   location: string,
   query: string,
-  employmentType: boolean
+  fullTimeOnly: boolean
 ) => {
-  let filteredJobs = [...jobs];
+  let filtered = jobs;
 
-  if (query !== "") {
-    return [...filteredJobs].filter((job) => {
-      return (
-        job.position.toLowerCase().includes(query.toLowerCase()) ||
-        job.company.toLowerCase().includes(query.toLowerCase())
-      );
-    });
+  if (query.trim()) {
+    const q = query.toLowerCase();
+    filtered = filtered.filter(
+      (job) =>
+        job.position.toLowerCase().includes(q) ||
+        job.company.toLowerCase().includes(q)
+    );
   }
 
-  if (location !== "") {
-    return [...filteredJobs].filter((job) => {
-      return job.location.toLowerCase().includes(query.toLowerCase());
-    });
+  if (location.trim()) {
+    const loc = location.toLowerCase();
+    filtered = filtered.filter((job) =>
+      job.location.toLowerCase().includes(loc)
+    );
   }
 
-  if (employmentType) {
-    {
-      return (filteredJobs = filteredJobs.filter(
-        (job) => job.contract === FULL_TiME
-      ));
-    }
+  if (fullTimeOnly) {
+    filtered = filtered.filter((job) => job.contract === FULL_TIME);
   }
 
-  console.log(filteredJobs);
-
-  return filteredJobs;
+  return filtered;
 };
 
 export const JobPage = () => {
@@ -47,11 +42,6 @@ export const JobPage = () => {
   const [query, setQuery] = useState("");
   const [isFullTime, setIsFullTime] = useState(false);
   const { jobs } = useJob();
-  // const [jobsToRender, setJobsToRender] = useState(jobs);
-
-  // useMemo(() => {
-  //   setJobsToRender(filterJobs(jobs, query, location, isFullTime));
-  // }, [jobs, query, location, isFullTime]);
 
   return (
     <section className="mainPage">
@@ -61,7 +51,7 @@ export const JobPage = () => {
           setQuery={setQuery}
           setIsFullTime={setIsFullTime}
         />
-        <JobList jobs={filterJobs(jobs, query, location, isFullTime)} />
+        <JobList jobs={filterJobs(jobs, location, query, isFullTime)} />
       </div>
     </section>
   );

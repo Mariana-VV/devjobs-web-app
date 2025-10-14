@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { JobList } from "./JobList";
 import { useJob } from "./hooks/useJob";
 import { SearchPanel } from "../SearchPanel/SearchPanel";
@@ -8,14 +8,14 @@ const FULL_TiME = "Full Time";
 
 const filterJobs = (
   jobs: Job[],
-  location: string,
   query: string,
+  location: string,
   employmentType: boolean
 ) => {
   let filteredJobs = [...jobs];
 
-  if (query !== "") {
-    return [...filteredJobs].filter((job) => {
+  if (query.trim()) {
+    filteredJobs = [...filteredJobs].filter((job) => {
       return (
         job.position.toLowerCase().includes(query.toLowerCase()) ||
         job.company.toLowerCase().includes(query.toLowerCase())
@@ -23,21 +23,15 @@ const filterJobs = (
     });
   }
 
-  if (location !== "") {
-    return [...filteredJobs].filter((job) => {
-      return job.location.toLowerCase().includes(query.toLowerCase());
+  if (location.trim()) {
+    filteredJobs = [...filteredJobs].filter((job) => {
+      return job.location.toLowerCase().includes(location.toLowerCase());
     });
   }
 
   if (employmentType) {
-    {
-      return (filteredJobs = filteredJobs.filter(
-        (job) => job.contract === FULL_TiME
-      ));
-    }
+    filteredJobs = filteredJobs.filter((job) => job.contract === FULL_TiME);
   }
-
-  console.log(filteredJobs);
 
   return filteredJobs;
 };
@@ -47,11 +41,6 @@ export const JobPage = () => {
   const [query, setQuery] = useState("");
   const [isFullTime, setIsFullTime] = useState(false);
   const { jobs } = useJob();
-  // const [jobsToRender, setJobsToRender] = useState(jobs);
-
-  // useMemo(() => {
-  //   setJobsToRender(filterJobs(jobs, query, location, isFullTime));
-  // }, [jobs, query, location, isFullTime]);
 
   return (
     <section className="mainPage">

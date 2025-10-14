@@ -36,7 +36,7 @@ export const JobItem: React.FC<Props> = ({ job }) => {
             <p>{job?.contract}</p>
           </div>
           <Link to={`/details/${job.id}`}>
-            <h2 className="card__title title ">{job?.company}</h2>
+            <h2 className="card__title title ">{job?.position}</h2>
           </Link>
           <p className="card__company">{job?.company}</p>
         </div>

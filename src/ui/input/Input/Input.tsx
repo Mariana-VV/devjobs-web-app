@@ -6,11 +6,12 @@ type Props = InputProps & {
   Icon: ElementType;
 };
 
-export const Input: FC<Props> = ({ placeholder, Icon }) => {
+export const Input: FC<Props> = ({ placeholder, Icon, ...props }) => {
+  
   return (
     <label className="input">
       <Icon className="input__icon" />
-      <input placeholder={placeholder} className="input__field" />
+      <input placeholder={placeholder} className="input__field" {...props} />
     </label>
   );
 };

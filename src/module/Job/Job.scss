@@ -1,0 +1,57 @@
+@use "../../styles/utils/index.scss" as *;
+
+.card {
+  height: 228px;
+  background: $white;
+  border-radius: 6px;
+  position: relative;
+  padding: 49px 32px 32px 32px;
+  &__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left: 32px;
+    top: -25px;
+  }
+
+  &__country {
+    font-weight: 700;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 13px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.board {
+  padding-top: 119px;
+  padding-bottom: 208px;
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+}

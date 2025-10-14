@@ -1,0 +1,12 @@
+@use "../../styles/utils/index.scss" as *;
+
+.search-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &__full-time {
+    @include flex-between;
+    background-color: $white;
+    padding: 16px 16px 16px 32px;
+  }
+}

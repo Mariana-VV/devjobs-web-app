@@ -2,11 +2,12 @@
 
 .input {
   position: relative;
+  border-right: 1px solid #979797;
 
   &__field {
     padding: 28px 28px 28px 72px;
     border-radius: 6px;
-    max-width: 328px;
+
     width: 100%;
     border: none;
     outline: none;

@@ -3,6 +3,7 @@ import { useContext } from "react";
 
 import "./JobDetails.scss";
 import { JobContext } from "../Job/context/JobContext";
+import { MainButton } from "../../ui/button/MainButton/MainButton";
 
 export const JobDetails = () => {
   const { jobs } = useContext(JobContext);
@@ -70,7 +71,8 @@ export const JobDetails = () => {
               </div>
             </div>
             <div>
-              <button className="job__details-btn">Apply Now</button>
+              {/* <button className="job__details-btn">Apply Now</button> */}
+              <MainButton text="Apply Now" className="job__details-btn" />
             </div>
           </div>
 

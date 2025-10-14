@@ -2,18 +2,22 @@
 
 .job {
   line-height: 26px;
+  background: light-dark($white, $very-dark-blue);
+
+  &__details-do {
+    color: light-dark($dark-gray, $gray);
+  }
 
   & .container {
     max-width: 730px;
   }
 
   & p {
-    // color: $main-color;
+    color: light-dark($dark-gray, $gray);
   }
 
   &__details {
     padding: 48px 43px 48px 48px;
-    background-color: $white;
   }
 
   &__details-box {
@@ -21,6 +25,7 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 8px;
+    color: $dark-gray;
   }
 
   &__details-hero {
@@ -32,6 +37,7 @@
 
   &__details-requirements {
     margin-bottom: 48px;
+    color: light-dark($dark-gray, $gray);
 
     & p {
       margin-bottom: 24px;
@@ -47,13 +53,15 @@
       &::marker {
         position: absolute;
         left: 0;
+        color: $violet;
       }
     }
 
     & h2 {
       font-size: 20px;
       font-weight: bold;
-      // color: $title-color;
+      color: light-dark($very-dark-blue, $white);
+
       margin-bottom: 23px;
     }
   }
@@ -79,7 +87,7 @@
   }
 
   &__details-country {
-    // color: $accent-color;
+    color: $violet;
     font-size: 14px;
     font-weight: bold;
   }
@@ -94,7 +102,7 @@
 
   &__title {
     margin-bottom: 28px;
-    // color: $title-color;
+    color: light-dark($very-dark-blue, $white);
   }
 
   &__text {
@@ -103,6 +111,11 @@
 
   &__list {
     margin-bottom: 48px;
+    color: light-dark($dark-gray, $gray);
+
+    & li {
+      color: light-dark($dark-gray, $gray);
+    }
   }
 }
 
@@ -121,14 +134,16 @@ ol li {
 ol li::before {
   content: counter(num);
   font-weight: bold;
-  // color: $accent-color;
+  color: $violet;
+
   position: absolute;
   left: 0;
 }
 
 .job__employer {
   border-radius: 6px;
-  background-color: #fff;
+  color: light-dark($dark-gray, $gray);
+
   height: 140px;
   display: flex;
   margin-bottom: 32px;

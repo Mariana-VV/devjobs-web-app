@@ -8,7 +8,7 @@ type Props = {
 
 export const JobItem: React.FC<Props> = ({ job }) => {
   return (
-    <div className="card">
+    <Link to={`/details/${job.id}`} className="card">
       <span
         className="card__icon"
         style={{
@@ -35,9 +35,9 @@ export const JobItem: React.FC<Props> = ({ job }) => {
 
             <p>{job?.contract}</p>
           </div>
-          <Link to={`/details/${job.id}`}>
-            <h2 className="card__title title ">{job?.position}</h2>
-          </Link>
+
+          <h2 className="card__title title ">{job?.position}</h2>
+
           <p className="card__company">{job?.company}</p>
         </div>
 
@@ -45,6 +45,6 @@ export const JobItem: React.FC<Props> = ({ job }) => {
           <p className="card__country">{job?.location}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

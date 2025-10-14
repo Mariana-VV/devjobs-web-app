@@ -7,7 +7,6 @@ type Props = InputProps & {
 };
 
 export const Input: FC<Props> = ({ placeholder, Icon, ...props }) => {
-  
   return (
     <label className="input">
       <Icon className="input__icon" />

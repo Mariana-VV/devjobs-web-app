@@ -1,10 +1,10 @@
-import type React from "react";
 import "./SearchPanel.scss";
 
 import Search from "../../assets/images/search.svg?react";
 import Location from "../../assets/images/location.svg?react";
 import { Input } from "../../ui/input/Input/Input";
 import { MainButton } from "../../ui/button/MainButton/MainButton";
+import type { FC } from "react";
 
 type Props = {
   setLocation: (location: string) => void;
@@ -12,7 +12,7 @@ type Props = {
   setIsFullTime: (isFullTime: boolean) => void;
 };
 
-export const SearchPanel: React.FC<Props> = ({
+export const SearchPanel: FC<Props> = ({
   setQuery,
   setLocation,
   setIsFullTime,
@@ -22,18 +22,18 @@ export const SearchPanel: React.FC<Props> = ({
       <Input
         placeholder="Filter by title, companies, expertise..."
         Icon={Search}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(event) => setQuery(event.target.value)}
       />
       <Input
         placeholder="Filter by location..."
         Icon={Location}
-        onChange={(e) => setLocation(e.target.value)}
+        onChange={(event) => setLocation(event.target.value)}
       />
 
       <div className="search-panel__full-time">
         <input
           type="checkbox"
-          onChange={(e) => setIsFullTime(e.target.checked)}
+          onChange={(event) => setIsFullTime(event.target.checked)}
         />
         <label htmlFor="">Full Time Only</label>
         <MainButton text="Search" />

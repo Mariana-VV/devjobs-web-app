@@ -4,7 +4,7 @@ import { useJob } from "./hooks/useJob";
 import { SearchPanel } from "../SearchPanel/SearchPanel";
 import type { Job } from "../../types/Job";
 
-const FULL_TiME = "Full Time";
+const FULL_TIME = "Full Time";
 
 const filterJobs = (
   jobs: Job[],
@@ -12,7 +12,7 @@ const filterJobs = (
   location: string,
   employmentType: boolean
 ) => {
-  let filteredJobs = [...jobs];
+  let filteredJobs = jobs;
 
   if (query.trim()) {
     filteredJobs = [...filteredJobs].filter((job) => {
@@ -30,7 +30,7 @@ const filterJobs = (
   }
 
   if (employmentType) {
-    filteredJobs = filteredJobs.filter((job) => job.contract === FULL_TiME);
+    filteredJobs = filteredJobs.filter((job) => job.contract === FULL_TIME);
   }
 
   return filteredJobs;

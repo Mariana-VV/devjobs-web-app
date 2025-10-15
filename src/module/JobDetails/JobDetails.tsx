@@ -15,8 +15,6 @@ export const JobDetails = () => {
   const array = position?.website.split("/") || [];
   const companySite = array[array?.length - 1] + ".com";
 
-  console.log(id);
-
   return (
     <section className="job">
       <div className="container">
@@ -25,10 +23,7 @@ export const JobDetails = () => {
             className="job__employer-logo"
             style={{ backgroundColor: `${position?.logoBackground}` }}
           >
-            <img
-              src={`${import.meta.env.BASE_URL}/${position?.logo}`}
-              alt={position?.position}
-            />
+            <img src={`/${position?.logo}`} alt={position?.position} />
           </div>
           <div className="job__employer-content">
             <div className="job__employer-box">

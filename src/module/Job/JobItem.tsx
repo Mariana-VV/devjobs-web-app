@@ -16,7 +16,7 @@ export const JobItem: React.FC<Props> = ({ job }) => {
           color: `${job.logo}`,
         }}
       >
-        <img src={`${import.meta.env.BASE_URL}/${job?.logo}`} alt="" />
+        <img src={`/${job?.logo}`} alt="" />
       </span>
 
       <div className="card__block">

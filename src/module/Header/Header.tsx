@@ -1,4 +1,5 @@
 import { ThemeSwitcher } from "../../components/ThemeSwitcher/ThemeSwitcher";
+import { Logo } from "../../ui/Logo/Logo";
 import "./Header.scss";
 
 export const Header = () => {
@@ -6,12 +7,7 @@ export const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__content">
-          <div className="logo">
-            <img
-              src={`${import.meta.env.BASE_URL}/src/assets/images/logo.png`}
-              alt="logo"
-            />
-          </div>
+          <Logo />
           <ThemeSwitcher />
         </div>
       </div>

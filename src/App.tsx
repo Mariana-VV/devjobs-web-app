@@ -2,7 +2,7 @@ import "./App.scss";
 import "./ui/button/BaseButton/BaseButton.scss";
 import { Header } from "./module/Header/Header";
 import { JobPage } from "./module/Job/JobPage";
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import { JobDetailsPage } from "./module/JobDetails/JobDetailsPage";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
       <Header />
       <Routes>
-        <Route path="/devjobs-web-app" element={<JobPage />} />
+        <Route path="/" element={<JobPage />} />
         <Route path="/details/:id" element={<JobDetailsPage />} />
       </Routes>
     </>

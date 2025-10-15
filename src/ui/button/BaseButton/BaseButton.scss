@@ -1,0 +1,11 @@
+@use "../../../styles/utils/index.scss" as *;
+
+.button {
+  display: block;
+  width: 100%;
+  max-width: 141px;
+  color: $white;
+  padding: 16px;
+  border-radius: 5px;
+  font-weight: 700;
+}

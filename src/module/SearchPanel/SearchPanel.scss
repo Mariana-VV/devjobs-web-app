@@ -1,0 +1,16 @@
+@use "../../styles/utils/index.scss" as *;
+
+.search-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  background: light-dark($white, $very-dark-blue);
+
+  &__full-time {
+    @include flex-between;
+    background: light-dark($white, $very-dark-blue);
+    color: light-dark($very-dark-blue, rgba(255, 255, 255, 0.25));
+
+    padding: 16px 16px 16px 32px;
+  }
+}

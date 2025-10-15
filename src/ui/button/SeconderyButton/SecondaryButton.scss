@@ -1,0 +1,12 @@
+@use "../../../styles/utils/index.scss" as *;
+
+$button-secondary-bg: light-dark(#c9c9c9, $very-dark-blue);
+$button-secondary-hover-bg: light-dark($light-violet, $gray);
+
+.button--secondary {
+  background: $button-secondary-bg;
+
+  &:hover {
+    background: $button-secondary-hover-bg;
+  }
+}

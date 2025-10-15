@@ -1,0 +1,31 @@
+@use "../../../styles/utils/index.scss" as *;
+
+.input {
+  height: 100%;
+  position: relative;
+  border-right: 1px solid #979797;
+
+  &__field {
+    height: 100%;
+
+    padding: 28px 28px 28px 72px;
+    border-radius: 6px;
+
+    width: 100%;
+    border: none;
+    outline: none;
+
+    background: light-dark($white, $very-dark-blue);
+
+    &::placeholder {
+      color: light-dark(rgba(25, 32, 45, 0.25), rgba(255, 255, 255, 0.25));
+      font-size: 16px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 32px;
+    top: 37%;
+  }
+}

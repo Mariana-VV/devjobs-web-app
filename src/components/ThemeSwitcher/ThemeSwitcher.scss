@@ -1,7 +1,6 @@
 @use "../../styles/globals.scss" as *;
 
 .switcher {
-  background: $violet;
   @include flex-center;
   gap: 16px;
 
@@ -33,4 +32,8 @@
 
 .switch.switcher__box::after {
   transform: translate(170%);
+}
+
+.switcher__box:hover::after {
+  background: $light-violet;
 }

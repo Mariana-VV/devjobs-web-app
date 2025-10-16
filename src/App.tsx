@@ -8,23 +8,6 @@ import { JobDetailsPage } from "./module/JobDetails/JobDetailsPage";
 function App() {
   return (
     <>
-      {/* <ThemeSwitcher />
-      <div className="temp">
-        <MainButton text="Search" />
-
-        <MainButton text="Load More" />
-
-        <SecondaryButton text="Company Site" />
-
-        <MainButton text="Apply Now" />
-
-        <Input
-          placeholder="Filter by title, companies, expertise..."
-          Icon={Search}
-        />
-        <Input placeholder="Filter by location..." Icon={Location} />
-      </div> */}
-
       <Header />
       <Routes>
         <Route path="/" element={<JobPage />} />

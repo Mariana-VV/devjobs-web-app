@@ -12,10 +12,10 @@ export interface Job {
   description: string;
   requirements: {
     content: string;
-    items: [];
+    items: string[];
   };
   role: {
     content: string;
-    items: [];
+    items: string[];
   };
 }
